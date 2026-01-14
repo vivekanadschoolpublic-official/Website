@@ -1,13 +1,17 @@
 <!DOCTYPE html5>
 <html lang="en">
   <head>
-    <title>{{title}}</title>
+    <title>{% block title %} {% endblock %}</title>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1"
     />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ url_for('static', filename='assets/favicon.ico') }}"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
     <link
@@ -67,7 +71,7 @@
                     d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
                   ></path>
                 </svg>
-                (+91) 83052-27722</span
+                {{ details.contact }}</span
               >
               <span
                 data-component-name="span"
@@ -89,7 +93,7 @@
                   <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                 </svg>
-                vivekanand.public.school@gmail.com</span
+                {{ details.email }}</span
               >
             </div>
             <div data-component-name="div" class="flex gap-3">
@@ -309,12 +313,12 @@
                   data-component-name="div"
                   class="flex items-center gap-2 pt-2 text-amber-400 text-sm font-medium"
                 >
-                  <span data-component-name="span">EST. 1985</span
+                  <span data-component-name="span">EST. 2003</span
                   ><span
                     data-component-name="span"
                     class="w-1 h-1 bg-current rounded-full"
                   ></span
-                  ><span data-component-name="span">ISO 9001:2015</span>
+                  ><span data-component-name="span"> UDISE: 22070328728</span>
                 </div>
               </div>
               <div data-component-name="div">
@@ -460,10 +464,8 @@
                       ></path>
                       <circle cx="12" cy="10" r="3"></circle></svg
                     ><span data-component-name="span" class="text-slate-300"
-                      >JP Vihar<br data-component-name="br" />Mangla<br
-                        data-component-name="br"
-                      />Bilaspur, CG 495001</span
-                    >
+                      >{{ details.address }}
+                    </span>
                   </li>
                   <li data-component-name="li" class="flex items-center gap-3">
                     <svg
@@ -483,7 +485,7 @@
                         d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
                       ></path></svg
                     ><span data-component-name="span" class="text-slate-300"
-                      >(+91) 83052-27722</span
+                      >{{ details.contact }}</span
                     >
                   </li>
                   <li data-component-name="li" class="flex items-center gap-3">
@@ -505,7 +507,7 @@
                         d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
                       ></path></svg
                     ><span data-component-name="span" class="text-slate-300"
-                      >vivekanandpublic.school@gmail.com</span
+                      >{{ details.email }}</span
                     >
                   </li>
                 </ul>
