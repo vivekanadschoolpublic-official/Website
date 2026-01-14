@@ -1,0 +1,37 @@
+.centered {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.text {
+  font-size: 6rem;
+}
+
+.image {
+  height: 14em;
+  width: 14em;
+  justify-content: flex-start;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-item: bottom;
+  min-height: 100vh;
+  margin: 0;
+}
+
+header {
+  background: #ff8888;
+}
+
+main {
+  flex: 1;
+  background: #88ff88
+}
+
+footer {
+  background: #8888ff;
+}
