@@ -24,10 +24,10 @@ Uses the following technology:
 - [ ] Create the get APIs
 - [ ] Figure out the security measures and how to enable them.
 - [ ] Do primary testing
-- [ ] Using flask-migrate to make the `migrations` from one database to another.
+- [x] Using flask-migrate to make the `migrations` from one database to another.
 - [x] Make the HTML different and others different
-- [ ] need to edit the HTML to display as it did in replit.
-- [ ] Change the home address.
+- [x] need to edit the HTML to display as it did in replit.
+- [x] Change the home address.
 
 Make more improvements and see documentations.
 So i was able to make the front end UIs and work on them.
