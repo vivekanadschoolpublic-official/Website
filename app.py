@@ -27,6 +27,7 @@ def inject_site_details():
         "secondary_contact": "(+91) 88392-05805",
         "index_title": "Vivekanand Public School",
         "enquiry_title": "Enquiry",
+        "faqs_title": "Frequently Asked Questions",
     }
     return dict(details=details)
 
@@ -40,6 +41,11 @@ def test_page():
 @app.route("/enquiry")
 def enquiry():
     return render_template("enquiry.html")
+
+
+@app.route("/faqs")
+def faq():
+    return render_template("faqs.html")
 
 
 # This block allows you to run the application directly
