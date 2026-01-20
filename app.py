@@ -4,6 +4,19 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
+# Faculty details
+@app.context_processor
+def inject_faculty_details():
+    faculties = {
+        "Principal": "Mrs. Preeti Singh",
+        "Incharge": "Mrs. Shuchi Patel",
+        "Manager": "Ms. Sanskriti Singh",
+        "Academic_incharge": "Mrs. Mamta Chauhan",
+        "Primary_incharge": "Mrs. Bharti Singh",
+    }
+    return dict(faculty=faculties)
+
+
 # Personal details that are unanimous along all the pages
 @app.context_processor
 def inject_site_details():
@@ -11,6 +24,7 @@ def inject_site_details():
         "address": "J.P. Vihar Colony, Mangla, Bilaspur(C.G.)",
         "email": "vivekanand.school.public@gmail.com",
         "contact": "(+91) 83052-27722",
+        "secondary_contact": "(+91) 88392-05805",
         "index_title": "Vivekanand Public School",
         "enquiry_title": "Enquiry",
     }
